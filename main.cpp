@@ -13,30 +13,13 @@
 using namespace std;
 
 int main() {
-    ifstream ifs("input.txt");
-
-	Point A;
-    Point B;
-    Point C;
-    Point a;
-    Point b;
-    Point c;
-
-    A.set(0, 0);
-    B.set(6, 2);
-    C.set(4, 8);
-
-    a.set(4, 0);
-    b.set(0, 4);
-    c.set(6, 6);
-
+	// данные для входа
+	Point A(0, 0), B(6, 2), C(4, 8);
+	Point a(0, 4), b(4, 0), c(6, 6);
 
 
 	Triangle T(A, B, C), Y(a, b, c);
 
 	intersect(T, Y);
-
-
-	ifs.close();
 	return 0;
 }
